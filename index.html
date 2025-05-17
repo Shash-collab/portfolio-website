@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: #111;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ff5722;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #222, #111);
+            text-align: center;
+            padding: 100px 10%;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #ff5722;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 50px 10%;
+            background: #111;
+        }
+
+        .about img {
+            width: 40%;
+            border-radius: 10px;
+            margin-right: 5%;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+
+        .about p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 50px 10%;
+            background: #222;
+            text-align: center;
+        }
+
+        .skills h3 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff5722;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .skill-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .skill-item p {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 50px 10%;
+            background: #111;
+        }
+
+        .projects h3 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff5722;
+            text-align: center;
+        }
+
+        .project-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: #222;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        .project-card img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .project-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 10%;
+            background: #111;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .contact a {
+            color: #ff5722;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #000;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Hello, I'm [Shashank yadav]</h2>
+    <p>web developer | Designer | Problem Solver</p>
+    <a href="#projects" class="btn">See My Work</a>
+</div>
+
+<section id="about" class="about">
+    
+    <div class="about-content">
+        <img src="./image/IMG_3887.JPG " >
+        <h3>About Me</h3>
+        <p>I am a passionate web developer with expertise in creating visually stunning and user-friendly websites. I enjoy coding, designing, and turning ideas into reality.</p>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h3>Skills</h3>
+    <div class="skill-list">
+        <div class="skill-item">
+            <h4>HTML & CSS</h4>
+            <p>Building responsive and modern websites.</p>
+        </div>
+        <div class="skill-item">
+            <h4>JavaScript</h4>
+            <p>Interactive web development and animations.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <h3>My Projects</h3>
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="https://via.placeholder.com/300x200" alt="Project 1">
+            <h4>Project 1</h4>
+            <p>A responsive e-commerce website.</p>
+        </div>
+        <div class="project-card">
+            <img src="https://via.placeholder.com/300x200" alt="Project 2">
+            <h4>Project 2</h4>
+            <p>A personal portfolio showcasing modern design.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3>Contact Me</h3>
+    <p>I'm open to freelance work and collaborations.</p>
+    <p>Email: <a href="yshashank858s@gmail.com">yourname@example.com</a></p>
+</section>
+
+<footer>
+    <p>© 2024 [Your Name]. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
